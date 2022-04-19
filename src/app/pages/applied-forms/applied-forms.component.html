@@ -1,0 +1,28 @@
+<h3>Applied Forms</h3>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let form of forms">
+      <mat-expansion-panel-header > 
+        <mat-panel-title>
+         {{form.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+         {{form.date}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p><b>Major : </b>{{form.major}}</p>
+      <p><b>Total Houers : </b>{{form.TotalH}}</p>
+      <p><b>Days Avaliable : </b>{{form.days}}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <br>
+  <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+
+  
+<br>
+<br>
+<br>
